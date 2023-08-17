@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>キーコード表示</title>
+</head>
+
+<body>
+  <h1>キーコード表示</h1>
+  <p>キーを押してください。押したキーのキーコードが表示されます。</p>
+  <p id="keyCodeDisplay"></p>
+
+  <script>
+    document.addEventListener("keydown", function (event) {
+      const keyCodeDisplay = document.getElementById("keyCodeDisplay");
+      keyCodeDisplay.textContent = `押されたキー: ${event.key} (キーコード: ${event.keyCode})`;
+    });
+  </script>
+</body>
+
+</html>
